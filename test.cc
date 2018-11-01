@@ -3,6 +3,7 @@
 #include <iostream>
 #include "all_perms_stl.h"
 #include "all_perms_agency_1.h"
+#include "all_perms_dict.h"
 
 using namespace all_perms;
 using namespace std;
@@ -24,6 +25,7 @@ void test(const string &title, shared_ptr<AllPerms> p) {
 int main() {
     test("STL", make_shared<AllPermsSTL>());
     test("Agency1", make_shared<AllPermsAgency1>());
+    test("Dict", make_shared<AllPermsDict>());
     return 0;
 }
 
