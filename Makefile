@@ -1,8 +1,8 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -Wall -Wextra
 DEBUG ?= 0
-DEBUG_FLAGS = -Og -DDEBUG -g
-RELEASE_FLAGS = -O3 -DNDEBUG -funroll-loops -march=native -Xpreprocessor -fopenmp
+DEBUG_FLAGS = -DDEBUG -g
+RELEASE_FLAGS = -O3 -DNDEBUG -funroll-loops -march=native
 OUTPUT_OPTION=-MMD -MP -o $@
 LDLIBS =
 EXEC = test
