@@ -16,7 +16,7 @@ public:
         return n < 3 ? n : n * factorial(n - 1);
     }
 
-    auto get_perms() const {
+    auto perms() const {
         return perms_;
     }
     
