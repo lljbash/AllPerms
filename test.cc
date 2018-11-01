@@ -1,4 +1,5 @@
 #include <string>
+#include <memory>
 #include <iostream>
 #include "all_perms_stl.h"
 
