@@ -1,5 +1,6 @@
 #include "all_perms.h"
 #include <set>
+#include <unordered_set>
 #include <chrono>
 
 using namespace all_perms;
@@ -11,7 +12,22 @@ bool AllPerms::validate(int n, bool logging, std::ostream &out) {
     for (int64_t i = 1; i < max_iter; ++i) {
         step();
         auto res = validate_set.insert(perms_);
-        if (!res.second) {
+        bool flag = res.second;
+        if (flag) {
+            std::unordered_set<int> rep_set;
+            for (int p : perms_) {
+                if (p < 0 || p >= n) {
+                    flag = false;
+                    break;
+                }
+                auto res = rep_set.insert(p);
+                if (!res.second) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (!flag) {
             if (logging) {
                 out << "Validation error!" << std::endl;
             }

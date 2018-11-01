@@ -1,4 +1,5 @@
 #include "all_perms_stl.h"
+#include <algorithm>
 
 using namespace all_perms;
 
