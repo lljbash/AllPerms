@@ -11,7 +11,6 @@ public:
     AllPermsSTL(const AllPermsSTL &) = delete;
     AllPerms & operator=(const AllPermsSTL &) = delete;
 
-    virtual void initialize(int n) override;
     virtual void step() override;
 };
 

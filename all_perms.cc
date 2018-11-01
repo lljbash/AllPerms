@@ -57,3 +57,10 @@ int64_t AllPerms::speed_test(int n, int64_t max_iter, bool logging, std::ostream
     return t;
 }
 
+void AllPerms::initialize(int n) {
+    perms_.resize(n);
+    for (int i = 0; i < n; ++i) {
+        perms_.at(i) = i;
+    }
+}
+
