@@ -24,9 +24,8 @@ void AllPermsAgency3::step() {
     else {
         int j = i + 1;
         for (int k = j + 1; k < n; ++k) {
-            for (int l = n-k; l < n; ++l) {
-                std::swap(perms()[l-1], perms()[l]);
-            }
+            auto tmp = perms().begin() + (n - k - 1);
+            std::rotate(tmp, tmp + 1, perms().end());
         }
         int k = j - agency_[i] + 1;
         std::swap(perms()[k-1], perms()[k]);
