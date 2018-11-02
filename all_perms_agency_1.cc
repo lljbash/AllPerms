@@ -19,7 +19,7 @@ void AllPermsAgency1::step() {
         }
     }
     if (i < 0) {
-        std::reverse(perms().begin(), perms().end());
+        initialize(n);
     }
     else {
         int j = n - agency_[i];
