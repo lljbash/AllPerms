@@ -25,9 +25,9 @@ void test(const string &title, shared_ptr<AllPerms> p) {
 }
 
 int main() {
-    test("STL", make_shared<AllPermsSTL>());
-    test("Agency1", make_shared<AllPermsAgency1>());
-    test("Agency2", make_shared<AllPermsAgency2>());
+    //test("STL", make_shared<AllPermsSTL>());
+    //test("Agency1", make_shared<AllPermsAgency1>());
+    //test("Agency2", make_shared<AllPermsAgency2>());
     test("Agency3", make_shared<AllPermsAgency3>());
     test("Dict", make_shared<AllPermsDict>());
     return 0;
