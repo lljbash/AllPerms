@@ -16,7 +16,7 @@ public:
 
 private:
     std::vector<int> agency_;
-    std::vector<int> position_;
+    std::vector<int> direction_;
 };
 
 } // namespace all_perms
