@@ -8,14 +8,14 @@ using namespace all_perms;
 bool AllPerms::validate(int n, bool logging, std::ostream &out) {
     initialize(n);
     int64_t max_iter = factorial(n);
-    std::set<decltype(perms_)> validate_set = {perms_};
+    std::set<std::vector<int>> validate_set = {perms()};
     for (int64_t i = 1; i < max_iter; ++i) {
         step();
-        auto res = validate_set.insert(perms_);
+        auto res = validate_set.insert(perms());
         bool flag = res.second;
         if (flag) {
             std::unordered_set<int> rep_set;
-            for (int p : perms_) {
+            for (int p : perms()) {
                 if (p < 0 || p >= n) {
                     flag = false;
                     break;
@@ -55,12 +55,5 @@ int64_t AllPerms::speed_test(int n, int64_t max_iter, bool logging, std::ostream
         out << "Elapsed time: " << t << "ms" << std::endl;
     }
     return t;
-}
-
-void AllPerms::initialize(int n) {
-    perms_.resize(n);
-    for (int i = 0; i < n; ++i) {
-        perms_.at(i) = i;
-    }
 }
 
