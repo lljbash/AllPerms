@@ -12,7 +12,7 @@ void AllPermsAgency1::step() {
     int n = perms().size();
     ++agency_.back();
     int i = n - 2;
-    for (; i > 0 && agency_[i] > n-i-1; --i) {
+    for (; i >= 0 && agency_[i] > n-i-1; --i) {
         agency_[i] = 0;
         if (i > 0) {
             ++agency_[i-1];
