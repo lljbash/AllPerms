@@ -28,7 +28,7 @@ void AllPermsAgency4::step() {
     else {
         int d = direction_[i];
         int j = d == 0 ? r - agency_[i] : l + agency_[i];
-        int k = j + ((d << 1) - 1);
+        int k = d == 0 ? j - 1 : j + 1;
         std::swap(perms()[j], perms()[k]);
     }
 }
