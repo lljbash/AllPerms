@@ -21,9 +21,9 @@ void AllPermsAgency4::step() {
         initialize(n);
     }
     else {
-        int d = (agency_[i-1] + ((i-1)&1) * agency_[i-2]) & 1;
+        int d = ((agency_[i-1]) ^ ((i-1) & (agency_[i-2]))) & 1;
         int j = position_[i-1];
-        int k = j + (d * 2 - 1);
+        int k = j + (d + d - 1);
         std::swap(position_[perms()[j]], position_[perms()[k]]);
         std::swap(perms()[j], perms()[k]);
     }
