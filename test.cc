@@ -6,6 +6,7 @@
 #include "all_perms_agency_2.h"
 #include "all_perms_agency_3.h"
 #include "all_perms_agency_4.h"
+#include "all_perms_dict.h"
 
 using namespace all_perms;
 using namespace std;
@@ -30,6 +31,7 @@ int main() {
     test("Agency2", make_shared<AllPermsAgency2>());
     test("Agency3", make_shared<AllPermsAgency3>());
     test("Agency4", make_shared<AllPermsAgency4>());
+    test("Dict", make_shared<AllPermsDict>());
     return 0;
 }
 
