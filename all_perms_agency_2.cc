@@ -15,9 +15,7 @@ void AllPermsAgency2::step() {
     int i = n - 2;
     for (; i > 0 && agency_[i] > n-i-1; --i) {
         agency_[i] = 0;
-        if (i > 0) {
-            ++agency_[i-1];
-        }
+        ++agency_[i-1];
     }
     if (i < 0) {
         initialize(n);
