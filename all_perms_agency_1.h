@@ -11,7 +11,7 @@ public:
     AllPermsAgency1(const AllPermsAgency1 &) = delete;
     AllPerms & operator=(const AllPermsAgency1 &) = delete;
 
-    virtual const std::vector<int> & perms() const override {
+    virtual std::vector<int> perms() const override {
         return perms_;
     }
 
