@@ -19,7 +19,7 @@ public:
     bool validate(int n, bool logging = true, std::ostream &out = std::cout);
     int64_t speed_test(int n, int64_t max_iter = -1, bool logging = true, std::ostream &out = std::cout);
 
-    virtual const std::vector<int> & perms() const = 0;
+    virtual std::vector<int> perms() const = 0;
 
     virtual void initialize(int n) = 0;
     virtual void step() = 0;
