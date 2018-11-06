@@ -4,12 +4,12 @@
 
 namespace all_perms {
 
-class AllPermsDict : public AllPerms {
+class AllPermsAgency4 : public AllPerms {
 public:
-    AllPermsDict() = default;
-    virtual ~AllPermsDict() = default;
-    AllPermsDict(const AllPermsDict &) = delete;
-    AllPerms & operator=(const AllPermsDict &) = delete;
+    AllPermsAgency4() = default;
+    virtual ~AllPermsAgency4() = default;
+    AllPermsAgency4(const AllPermsAgency4 &) = delete;
+    AllPerms & operator=(const AllPermsAgency4 &) = delete;
 
     virtual const std::vector<int> & perms() const override {
         return perms_;
@@ -20,6 +20,8 @@ public:
 
 private:
     std::vector<int> perms_;
+    std::vector<int> agency_;
+    std::vector<int> direction_;
 };
 
 } // namespace all_perms
